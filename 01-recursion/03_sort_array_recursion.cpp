@@ -5,12 +5,12 @@ using namespace std;
 
 void insert(vector <int>& v, int temp){
 	
-	if(v.size() == 0 || v[v.size()-1] <= temp){
+	if(v.size() == 0 || v[v.size()-1] <= temp){	//Base Condition
 		v.push_back(temp);
 		return;
 	}
 	
-	int val = v[v.size()-1];
+	int val = v[v.size()-1];			//Induction Steps
 	v.pop_back();
 	insert(v, temp);
 	v.push_back(val);
@@ -18,10 +18,10 @@ void insert(vector <int>& v, int temp){
 
 void sort(vector <int>& v){
 	
-	if(v.size() == 1)			//Base Condition
+	if(v.size() == 1)				//Base Condition
 		return;
 		
-	int temp = v[v.size()-1];
+	int temp = v[v.size()-1];			//Induction Steps
 	v.pop_back();
 	sort(v);
 	insert(v, temp);
