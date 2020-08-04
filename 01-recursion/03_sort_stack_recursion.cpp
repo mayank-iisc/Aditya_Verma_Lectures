@@ -5,7 +5,7 @@ using namespace std;
 
 void insert(stack <int>& s, int temp){
 	
-	if(s.empty() || s.top() <= temp){		//Base Condition
+	if(s.empty() || s.top() <= temp){				//Base Condition
 		s.push(temp);
 		return;
 	}
