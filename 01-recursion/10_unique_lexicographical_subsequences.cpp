@@ -1,3 +1,7 @@
+/*	Output should not have duplicates and should be in lexicographical order
+	Input: 	aac
+	Output:  a aa aac ac c
+*/
 #include <iostream>
 #include <set>
 #include <string>
@@ -18,7 +22,7 @@ void solve(string ip, string op, set <string>& S){
 	op2.push_back(ip[0]);
 	ip.erase(ip.begin() + 0);		//Smaller input
 	
-	solve(ip, op1, S);					//Calls on smaller input
+	solve(ip, op1, S);			//Calls on smaller input
 	solve(ip, op2, S);
 	
 }
@@ -27,7 +31,7 @@ int main(){
 	
 	string ip = "aac";
 	string op = "";
-	set <string> S;
+	set <string> S;				//Ordered set for lexicographical order
 	
 	solve(ip, op, S);
 	
