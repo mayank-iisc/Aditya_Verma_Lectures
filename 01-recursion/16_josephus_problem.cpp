@@ -1,3 +1,6 @@
+/* 	Input: N = 40, k = 7
+	Output: 24
+*/
 #include <iostream>
 #include <vector>
 
